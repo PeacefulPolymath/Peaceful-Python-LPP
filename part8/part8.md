@@ -6,6 +6,9 @@ Here are **6 solid, meaningful challenges** that actually test your understandin
 
 ---
 
+There are no information here about Tuples. However, we encourage you to go get off the screen sometime and watch a tutorial on tuples and comebook.
+Touch grass!
+
 # Part 8 – Tuples and Dictionaries (Quality Challenges)
 
 ---
