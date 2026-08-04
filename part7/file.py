@@ -18,3 +18,7 @@ print(sum(newlist))
 print(min(newlist))
 print(max(newlist))
 print(sum(newlist)/len(newlist))
+
+
+#Waiting for your contrinution 
+#Currently bored
