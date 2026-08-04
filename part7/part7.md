@@ -172,7 +172,7 @@ Now changes to `copy1` won't affect `original`.
 
 ## Practice Challenges 🏆
 
-**Challenge 35 – Shopping List Manager**
+**Challenge 30 – Shopping List Manager**
 Create an empty list called `shopping_list`. Write a program that repeatedly asks the user:
 - "Add an item (or 'done' to finish): "
 - Add each item to the list.
@@ -182,7 +182,7 @@ Create an empty list called `shopping_list`. Write a program that repeatedly ask
 
 ---
 
-**Challenge 36 – List Statistics**
+**Challenge 31 – List Statistics**
 Ask the user to enter 5 numbers (use a loop). Store them in a list. Then print:
 - The list
 - The sum of all numbers
@@ -194,25 +194,25 @@ Ask the user to enter 5 numbers (use a loop). Store them in a list. Then print:
 
 ---
 
-**Challenge 37 – Remove Duplicates**
+**Challenge 32 – Remove Duplicates**
 Given a list `items = [1, 2, 2, 3, 4, 4, 5]`, write a program that creates a new list with only the unique items (remove duplicates). Print the new list.
 
 *Hint: you can check if an item is already in the new list before adding it.*
 
 ---
 
-**Challenge 38 – Reverse a List (Without Using reverse() or slicing)**
+**Challenge 33 – Reverse a List (Without Using reverse() or slicing)**
 Ask the user for a list of numbers (you can decide how many). Then print the list in reverse order **without** using `reverse()` or `[::-1]`. Use a loop to swap elements or build a new list.
 
 ---
 
-**Challenge 39 – Find the Index**
+**Challenge 34 – Find the Index**
 Ask the user for a list of names (enter them one by one, stop with 'done'). Then ask for a name to search for. If the name is in the list, print its index (position). If not, print "Not found".  
 *(You can use the `index()` method, but try to implement it manually with a loop for practice.)*
 
 ---
 
-**Challenge 40 – To‑Do List (Add and Remove)**
+**Challenge 45 – To‑Do List (Add and Remove)**
 Create an empty list `tasks`. Write a program that shows a menu:
 1. Add a task
 2. Remove a task (by name)
