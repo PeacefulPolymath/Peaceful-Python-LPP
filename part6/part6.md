@@ -145,6 +145,6 @@ print(result)
 
 ## What’s next?
 
-In **Part 7**, we'll dive into **loops** (`for` and `while`) – enabling your programs to repeat tasks efficiently. You'll combine loops with conditionals to build even more powerful applications.
+In **Part 7**, we'll dive into **Lists**.
 
 Keep coding – you're building a solid foundation! 🐍
