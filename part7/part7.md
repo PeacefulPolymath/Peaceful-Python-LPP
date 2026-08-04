@@ -212,7 +212,7 @@ Ask the user for a list of names (enter them one by one, stop with 'done'). Then
 
 ---
 
-**Challenge 45 – To‑Do List (Add and Remove)**
+**Challenge 35 – To‑Do List (Add and Remove)**
 Create an empty list `tasks`. Write a program that shows a menu:
 1. Add a task
 2. Remove a task (by name)
