@@ -1,6 +1,7 @@
 def is_pangram(sentence):
     alphas = list("abcdefghijklmnopqrstuvwxyz")
     occurs = []
+    sentence = sentence.lower()
     for i in sentence:
         if i in alphas:
             if i not in occurs:
