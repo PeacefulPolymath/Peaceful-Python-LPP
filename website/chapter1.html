@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 - Python Basics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #1a0033, #5c327b, #8c4cf6);
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            align-self: flex-start;
+            margin: 20px 30px;
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            width: 350px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .panel.wide {
+            width: min(900px, 90vw);
+        }
+
+        .motivation {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .lesson-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .link-btn {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 28px;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.5);
+        }
+
+        .start-btn {
+            display: inline-block;
+            font-family: inherit;
+            padding: 14px 45px;
+            background: linear-gradient(135deg, #ff6ec7, #a855f7);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.5);
+        }
+
+        .hidden { display: none; }
+
+        .solutions {
+            width: 100%;
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .solution {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .filename {
+            color: #00ff00;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+        }
+
+        .solution pre {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            margin: 0;
+            text-align: left;
+        }
+
+        .done-btn {
+            background: transparent;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            font-family: inherit;
+            font-size: 16px;
+            padding: 14px 40px;
+            border-radius: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .done-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 255, 0, 0.3);
+        }
+
+        .footer-content { text-align: center; }
+
+        .footer-social { margin-top: 10px; }
+
+        .github-support-link {
+            color: #00ff00;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .github-support-link:hover { color: #00cc00; }
+    </style>
+</head>
+<body>
+
+    <a class="back-link" href="progress.html">&larr; Back to Chapters</a>
+
+    <div class="panel wide">
+        <h1>Chapter 1</h1>
+        <p class="motivation">Python can bite you if you go deep without basic stuff. So Learn Basics</p>
+
+        <div class="lesson-links">
+            <a class="link-btn" href="https://automatetheboringstuff.com/2e/chapter1/" target="_blank" rel="noopener">Read the Lesson (ATBS)</a>
+            <a class="link-btn" href="https://inventwithpython.com/automate3workbook/chapter1.html" target="_blank" rel="noopener">(Invent with Python)</a>
+        </div>
+
+        <button id="btn-solutions" class="start-btn">Show Solutions</button>
+
+        <div id="solutions" class="solutions hidden">
+
+            <div class="solution">
+                <h3 class="filename">perimeterAreaCalculator.py</h3>
+                <pre class="language-python"><code>
+length = int(input('Enter the length of the rectangle (Only numbers):\n'))
+width = int(input('Enter the width of the rectangle (Only numbers):\n'))
+area = length * width
+perimeter = 2*(length + width)
+print(f'Area of the Rectangle:\n{area}')
+print(f'Perimeter of Rectangle:\n{perimeter}')</code></pre>
+            </div>
+            
+            <div class="solution">
+                <h3 class="filename">rectPrint.py</h3>
+                <pre class="language-python"><code>height = 5
+width = int(input('Enter the width of the rectangle (Only numbers): '))
+print(((width*'O')+'\n')*height))</code></pre>
+            </div>
+        </div>
+
+        <button id="btn-done" class="done-btn">Mark as Done</button>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/PeacefulPolymath/Peaceful-Python-LPP" target="_blank" rel="noopener noreferrer" class="github-support-link">Star or Support on GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        const btn = document.getElementById('btn-solutions');
+        let highlighted = false;
+
+        btn.addEventListener('click', () => {
+            const box = document.getElementById('solutions');
+            box.classList.toggle('hidden');
+            btn.textContent = box.classList.contains('hidden') ? 'Show Solutions' : 'Hide Solutions';
+
+            if (!highlighted) {
+                box.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+                highlighted = true;
+            }
+        });
+    </script>
+</body>
+</html>
