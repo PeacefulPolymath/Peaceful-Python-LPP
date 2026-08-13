@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 3 - Loops</title>
+    <title>Chapter 4 - Functions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <style>
         body {
@@ -157,11 +157,11 @@
     <a class="back-link" href="progress.html">&larr; Back to Chapters</a>
 
     <div class="panel wide">
-        <h1>Chapter 3</h1>
-        <p class="motivation">A Loop when done wrongly leads to infinity - 'PeacefulPolymath'</p>
+        <h1>Chapter 4</h1>
+        <p class="motivation">A function is a sibling of junction</p>
         <div class="lesson-links">
-            <a class="link-btn" href="https://automatetheboringstuff.com/3e/chapter3/" target="_blank" rel="noopener">Read the Lesson (ATBS)</a>
-            <a class="link-btn" href="https://inventwithpython.com/automate3workbook/chapter3.html" target="_blank" rel="noopener">(Invent with Python)</a>
+            <a class="link-btn" href="https://automatetheboringstuff.com/3e/chapter4/" target="_blank" rel="noopener">Read the Lesson (ATBS)</a>
+            <a class="link-btn" href="https://inventwithpython.com/automate3workbook/chapter4.html" target="_blank" rel="noopener">(Invent with Python)</a>
         </div>
 
         <button id="btn-solutions" class="start-btn">Show Solutions</button>
@@ -169,44 +169,58 @@
         <div id="solutions" class="solutions hidden">
 
             <div class="solution">
-                <h3 class="filename">treePrint.py</h3>
+                <h3 class="filename">afterTransaction.py</h3>
                 <pre class="language-python"><code>
-num = int(input('Enter an integer: \n'))
-size = int(input('Enter the tree size (Numbers only): \n'))
-space = size - 1
-chars = 1
-for i in range(size):
-    print(space*' ' + chars *'^' + space*' ' )
-    space -= 1
-    chars += 2
-trunk = (size-1)*' '+ '#\n' + (size-1)*' '+ '#\n'
-print(trunk)
+def after_transaction(balance , transaction):
+    if not isinstance(balance ,int) or not isinstance(transaction , int):
+        print('Invalid Format')
+    else:
+        if balance + transaction < 0:
+            return balance
+        else:
+            return balance + transaction
+#print(after_transaction(100 , -200))
 
 
 </code></pre>
             </div>
             
             <div class="solution">
-                <h3 class="filename">xmasTreePrint.py</h3>
-                <pre class="language-python"><code>import random
-size = int(input('Enter the tree size (Numbers only): \n'))
-space = size - 1
-chars = 1
-text = ''
-options = ['^' , '^' , 'o' , '^']
-trunk = (size-1)*' '+ '#\n' + (size-1)*' '+ '#\n'
-while True:
-    if chars >= size*2:
-        break
-    else:
-        text = ''
-        for i in range(chars):
-            text += random.choice(options)
-        print(space*' ' + text + space*' ')
-        space -= 1
-        chars += 2
-print(trunk)
+                <h3 class="filename">arithmeticFunctions.py></h3> 
+                <pre class="language-python"><code>def plus_one(number):
+    return number + 1
+def add(number1 , number2):
+    totalsum = number1
+    for i in range(number2):
+        totalsum = plus_one(totalsum)
+    return totalsum
+def multiply(num1 , num2):
+    product = 0
+    for a in range(num2):
+        product = add(product , num1)
+    return product
+
+
+print(multiply(2 , 3))
         
+</code></pre>
+            <div class="solution">
+                <h3 class="filename">tickTockPrint.py
+                    <pre class="language-python"><code>def tick_tock(num):
+    msg = ''
+    if not isinstance(num , int):
+        return 'Invalid Input!'
+    else:
+        for i in range(num):
+            if i % 2 == 0:
+                msg += 'Tick...\n'
+            else:
+                if i+1 == num:
+                    msg+='Tock...'
+                else:
+                    msg += 'Tock...\n'
+    return msg
+print(tick_tock(2))
 </code></pre>
             
 
