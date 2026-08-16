@@ -122,6 +122,12 @@
             </div>
         </div>
     </footer>
-
+<script>
+    var done = parseInt(localStorage.getItem('lppDone') || '0', 10);
+    if (done > 0) {
+        document.getElementById('progress-msg').textContent =
+            "You've completed up to Chapter " + done;
+    }
+</script>
 </body>
 </html>
