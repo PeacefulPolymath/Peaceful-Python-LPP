@@ -228,7 +228,7 @@ print(tick_tock(2))
 
         </div>
 
-        <a id="btn-done" class="done-btn" href="progress.html">Mark as Done</a>
+        <a id="btn-done" class="done-btn" href="progress.html" onclick="markDone(4)">Mark as Done</a>
     </div>
     
     <footer class="site-footer">
@@ -242,21 +242,26 @@ print(tick_tock(2))
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>
-        const btn = document.getElementById('btn-solutions');
-        let highlighted = false;
+    function markDone(n) {
+        var prev = parseInt(localStorage.getItem('lppDone') || '0', 10);
+        if (n > prev) localStorage.setItem('lppDone', String(n));
+    }
 
-        btn.addEventListener('click', () => {
-            const box = document.getElementById('solutions');
-            box.classList.toggle('hidden');
-            btn.textContent = box.classList.contains('hidden') ? 'Show Solutions' : 'Hide Solutions';
+    const btn = document.getElementById('btn-solutions');
+    let highlighted = false;
 
-            if (!highlighted) {
-                box.querySelectorAll('pre code').forEach((block) => {
-                    hljs.highlightElement(block);
-                });
-                highlighted = true;
-            }
-        });
-    </script>
+    btn.addEventListener('click', () => {
+        const box = document.getElementById('solutions');
+        box.classList.toggle('hidden');
+        btn.textContent = box.classList.contains('hidden') ? 'Show Solutions' : 'Hide Solutions';
+
+        if (!highlighted) {
+            box.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+            highlighted = true;
+        }
+    });
+</script>
 </body>
 </html>
